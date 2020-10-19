@@ -71,5 +71,6 @@ function generatePassword() {
 function copyPassword(){
   passwordText.select();
   document.execCommand("copy");
+  alert("Your password has been copied to the clipboard!")
   passwordText.innerHTML = "";
 };
