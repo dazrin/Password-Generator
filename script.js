@@ -17,7 +17,8 @@ copyBtn.addEventListener("click", copyPassword);
 //*Generate password function
 function generatePassword() {
 
-  var newPassword = "";
+  //Empty Strings to build password;  newPassword is where the password will be built, P to put the required character types to iterate through
+  var newPassword = ""; //
   var passwordChars = "";
 
   //Prompt user to ask how long the password should be
@@ -66,18 +67,24 @@ function generatePassword() {
     for(var i = 0; i < passwordLength; i++) {
       newPassword += passwordChars.charAt(Math.floor(Math.random() * passwordChars.length));
     };
+
+    /**Validation to ensure one character type from each of the selected criteria goes here
+     * Create a new function that takes in the newly generated password as a parameter, as well as boolean values for each of the required character types
+     * 1. iterate through the newly generated password
+     * 2. if the password contains at least one character from each requirement, print the password
+     * 3. if not, go back and generate a new password
+      */
+
     localStorage.setItem("password", newPassword);
     var pwd = localStorage.getItem("password");
     passwordText.textContent = pwd;
     };
 };
 
-
 //Copy to clipboard function
 function copyPassword(){
   passwordText.select();
   document.execCommand("copy");
   alert("Your password has been copied to the clipboard!")
-  passwordText.innerHTML = "";
 };
 

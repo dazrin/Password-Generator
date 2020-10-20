@@ -12,7 +12,8 @@
 ## About
 This is a random password generator application made using HTML, CSS and Javascript.
 This application uses lowercase, uppercase, numbers and symbols to randomly generate a password from 8 to 128 characters depending on the user's input.
-  You can launch the application by clicking [here.](https://dazrin.github.io/Password-Generator/)
+  You can launch the application by clicking [here.](https://dazrin.github.io/Password-Generator/) 
+  Website URL: https://dazrin.github.io/Password-Generator/
   
 ## Instructions
 When clicking the 'Generate Password' button, you will be greeted with a series of prompts to allow you to decide how long your password will be, as well as the types of characters that will be included.
@@ -28,7 +29,7 @@ When clicking the 'Generate Password' button, you will be greeted with a series 
   Click 'OK' to include them, and 'Cancel' to exclude them.
  > The special characters that the application will choose from are here: !@#$%^&*()-_=+{[]}|;:',<.>/?`~
 6. Additionally, once the password has been generated with the criteria of your choice, this application features a button that allows you to copy the generated password to the clipboard.
- > Simply click the 'Copy to Clipboard' button and you will be able to paste your newly generated password. Once you do this, the password will disappear from the text field.
+ > Simply click the 'Copy to Clipboard' button and you will be able to paste your newly generated password.
 
 ## Screenshot
 
