@@ -27,7 +27,7 @@ When clicking the 'Generate Password' button, you will be greeted with a series 
 
 ### Screenshot
 
-![PasswordGeneratorScreenshot](https://i.imgur.com/Hmh1kPC.png "A webpage featuring a password generator application")
+![PasswordGeneratorScreenshot](https://i.imgur.com/RwSJAXL.png "A webpage featuring a password generator application")
 
 
 ### Credits
