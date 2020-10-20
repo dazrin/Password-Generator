@@ -42,6 +42,10 @@ header {
   padding: 30px 40px;
 }
 
+#generate {
+  text-align: center;
+}
+
 .card-header::after {
   content: " ";
   display: block;
