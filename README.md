@@ -9,12 +9,12 @@
 * [Badges](#Badges)
 * [Contributing](#Contributing)
 
-## About
+### About
 This is a random password generator application made using HTML, CSS and Javascript.
 This application uses lowercase, uppercase, numbers and symbols to randomly generate a password from 8 to 128 characters depending on the user's input.
   You can launch the application by clicking [here.](https://dazrin.github.io/Password-Generator/)
   
-## Instructions
+### Instructions
 When clicking the 'Generate Password' button, you will be greeted with a series of prompts to allow you to decide how long your password will be, as well as the types of characters that will be included.
 1. The first prompt will ask the user how many characters the password will have.
 > You must only enter a number between 8 and 128; otherwise you will not be able to continue.
@@ -30,22 +30,22 @@ When clicking the 'Generate Password' button, you will be greeted with a series 
 6. Additionally, once the password has been generated with the criteria of your choice, this application features a button that allows you to copy the generated password to the clipboard.
  > Simply click the 'Copy to Clipboard' button and you will be able to paste your newly generated password. Once you do this, the password will disappear from the text field.
 
-## Screenshot
+### Screenshot
 
 ![PasswordGeneratorScreenshot](https://i.imgur.com/RwSJAXL.png "A webpage featuring a password generator application")
 
 
-## Credits
+### Credits
 -  Credit and thanks to Edward Apostol for teaching us how to use javascript prompts, if/else statements, and loops in order to make this application!
 -  Credit to various youtube channels for giving me the idea to add a 'Copy' button as well as helping me to figure out a simple approach to develop this application.
 
-## License
+### License
 Please credit me if you use or change my code! Thank you :)
 
-## Badges
+### Badges
 ![shield](https://img.shields.io/github/followers/dazrin?label=Follow&style=social)
 
-## Contributing
+### Contributing
 
 # Contributor Covenant Code of Conduct
 
