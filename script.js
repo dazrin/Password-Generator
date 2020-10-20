@@ -1,25 +1,29 @@
-var passwordText = document.querySelector("#password");
-var generateBtn = document.querySelector("#generate");
-var copyBtn = document.querySelector("#copy");
-
-//Character Codes
+//*Character Codes
 const lowercaseChars = "abcdefghijklmnopqrstuvwxyz";
 const uppercaseChars = "ABCDEFGHIJKLMNOPQRSTUZWXYZ";
 const numChars = "0123456789";
 const specialChars = "!@#$%^&*()-_=+{[]}|;:',<.>/?`~";
 
+//*Selectors
+var passwordText = document.querySelector("#password");
+var generateBtn = document.querySelector("#generate");
+var copyBtn = document.querySelector("#copy");
 
-// Add event listener to generate button
+//*Event Listeners on generate and copy buttons
 generateBtn.addEventListener("click", generatePassword);
 copyBtn.addEventListener("click", copyPassword);
 
+
+//*Generate password function
 function generatePassword() {
 
   var newPassword = "";
   var passwordChars = "";
 
+  //Prompt user to ask how long the password should be
   var passwordLength = prompt("How many characters should your password contain?");
 
+  //Validation to ensure user enters a number between 8 and 128 in passwordLength prompt
   if(Number(passwordLength < 8) | Number(passwordLength > 128) | isNaN(passwordLength)) {
     alert("You must enter a number between 8 and 128");
     return;
@@ -68,6 +72,8 @@ function generatePassword() {
     };
 };
 
+
+//Copy to clipboard function
 function copyPassword(){
   passwordText.select();
   document.execCommand("copy");
