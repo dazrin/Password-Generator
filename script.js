@@ -80,3 +80,4 @@ function copyPassword(){
   alert("Your password has been copied to the clipboard!")
   passwordText.innerHTML = "";
 };
+
