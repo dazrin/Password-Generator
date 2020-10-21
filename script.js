@@ -4,21 +4,18 @@ const uppercaseChars = "ABCDEFGHIJKLMNOPQRSTUZWXYZ";
 const numChars = "0123456789";
 const specialChars = "!@#$%^&*()-_=+{[]}|;:',<.>/?`~";
 
-//*Selectors
-var passwordText = document.querySelector("#password");
-var generateBtn = document.querySelector("#generate");
-var copyBtn = document.querySelector("#copy");
-
-//*Event Listeners on generate and copy buttons
-generateBtn.addEventListener("click", generatePassword);
-copyBtn.addEventListener("click", copyPassword);
-
+//*Selectors and event listeners 
+var passwordText = document.getElementById('password');
+var generateBtn = document.getElementById('generate').addEventListener("click", generatePassword);
+var copyBtn = document.getElementById('copy').addEventListener("click", copyPassword);
 
 //*Generate password function
 function generatePassword() {
 
-  //Empty Strings to build password;  newPassword is where the password will be built; passwordChars will contain the required character types to iterate through
-  var newPassword = ""; //
+  /* Empty Strings to build password;
+   * newPassword is where the password will be built;
+   * passwordChars will contain the required character types to iterate through */
+  var newPassword = ""; 
   var passwordChars = "";
 
   //Prompt user to ask how long the password should be
@@ -33,6 +30,7 @@ function generatePassword() {
   //Prompt user to include lowercase characters
   var lowercaseCharsInclude = confirm("Would you like to include lowercase characters in your password?");
   
+  //If user confirms, concatenate lowercaseChars string with the string (passwordChars)
   if(lowercaseCharsInclude) {
     passwordChars += lowercaseChars;
   }
@@ -40,6 +38,7 @@ function generatePassword() {
   //Prompt user to include uppercase characters
   var uppercaseCharsInclude = confirm("Would you like to include uppercase characters in your password?");
 
+  //If user confirms, concatenate uppercaseChars string with the string (passwordChars)
   if(uppercaseCharsInclude) {
     passwordChars += uppercaseChars;
   }
@@ -47,6 +46,7 @@ function generatePassword() {
   //Prompt user to include numerical characters
   var numCharsInclude = confirm("Would you like to include numbers in your password?");
 
+  //If user confirms, concatenate numChars string with the string (passwordChars)
   if(numCharsInclude) {
     passwordChars += numChars;
   }
@@ -54,15 +54,19 @@ function generatePassword() {
   //Prompt user to include Symbols
   var specialCharsInclude = confirm("Would you like to include symbols in your password?");
 
+   //If user confirms, concatenate numChars string with the string (passwordChars)
   if(specialCharsInclude) {
     passwordChars += specialChars;
   }
 
-  //Validation if user decides not to include any character type
-  if(passwordChars === "") {
+  //Validation if user decides not to include any character type and string remains empty
+  if(passwordChars === "") { 
     alert("You must select at least one character type to include in your password");
   }
 
+/** If the length of the password is greater than or equal to 8, and less than or equal to 128
+ * Iterate through the passwordChars string
+ * Take a random character in the string to concatenate to the empty string variable (newPassword) */
   if(Number(passwordLength >=8) && Number(passwordLength <= 128)){
     for(var i = 0; i < passwordLength; i++) {
       newPassword += passwordChars.charAt(Math.floor(Math.random() * passwordChars.length));
@@ -73,15 +77,27 @@ function generatePassword() {
      * 1. iterate through the newly generated password
      * 2. if the password contains at least one character from each requirement, print the password
      * 3. if not, go back and generate a new password
-      */
+      
+function validatePassword(newPassword, lowercaseCharsInclude, uppercaseCharsInclude, numCharsInclude, specialCharsInclude) {
+      for(var i = 0; i < newPassword.length; i++) {
+        if(lowercaseCharsInclude) {
+          if(newPassword.charAt(i) === lowercaseChars.charAt(i)) {
+*        }  
+*      }
+*    }
+*  }
+*/
 
-    localStorage.setItem("password", newPassword);
-    var pwd = localStorage.getItem("password");
-    passwordText.textContent = pwd;
+//Writes newly generated password to password textfield
+    passwordText.textContent = newPassword;
     };
 };
 
-//Copy to clipboard function
+/** Copy to clipboard function
+ * Selects password field using select() method
+ * Copies selected text using execCommand("copy")
+ * Alerts user the password has been copied 
+ *  */
 function copyPassword(){
   passwordText.select();
   document.execCommand("copy");
