@@ -17,7 +17,7 @@ copyBtn.addEventListener("click", copyPassword);
 //*Generate password function
 function generatePassword() {
 
-  //Empty Strings to build password;  newPassword is where the password will be built, P to put the required character types to iterate through
+  //Empty Strings to build password;  newPassword is where the password will be built; passwordChars will contain the required character types to iterate through
   var newPassword = ""; //
   var passwordChars = "";
 
