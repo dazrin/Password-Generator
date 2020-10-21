@@ -27,7 +27,6 @@ When clicking the 'Generate Password' button, you will be greeted with a series 
   Click 'OK' to include them, and 'Cancel' to exclude them.
 5. The fifth prompt will ask the user if they would like to include special characters in the password.
   Click 'OK' to include them, and 'Cancel' to exclude them.
- > The special characters that the application will choose from are here: !@#$%^&*()-_=+{[]}|;:',<.>/?`~
 6. Additionally, once the password has been generated with the criteria of your choice, this application features a button that allows you to copy the generated password to the clipboard.
  > Simply click the 'Copy to Clipboard' button and you will be able to paste your newly generated password.
 

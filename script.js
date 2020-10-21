@@ -1,15 +1,15 @@
-//*Character Codes
-const lowercaseChars = "abcdefghijklmnopqrstuvwxyz";
-const uppercaseChars = "ABCDEFGHIJKLMNOPQRSTUZWXYZ";
-const numChars = "0123456789";
-const specialChars = "!@#$%^&*()-_=+{[]}|;:',<.>/?`~";
+//Character types in strings to build password
+var lowercaseChars = "abcdefghijklmnopqrstuvwxyz";
+var uppercaseChars = "ABCDEFGHIJKLMNOPQRSTUZWXYZ";
+var numChars = "0123456789";
+var specialChars = "!@#$%^&*()-_=+{[]}|;:',<.>/?`~";
 
-//*Selectors and event listeners 
+//Selectors and event listeners
 var passwordText = document.getElementById('password');
 var generateBtn = document.getElementById('generate').addEventListener("click", generatePassword);
 var copyBtn = document.getElementById('copy').addEventListener("click", copyPassword);
 
-//*Generate password function
+//Generate password function
 function generatePassword() {
 
   /* Empty Strings to build password;
@@ -67,7 +67,7 @@ function generatePassword() {
 /** If the length of the password is greater than or equal to 8, and less than or equal to 128
  * Iterate through the passwordChars string
  * Take a random character in the string to concatenate to the empty string variable (newPassword) */
-  if(Number(passwordLength >=8) && Number(passwordLength <= 128)){
+  if(Number(passwordLength >= 8) && Number(passwordLength <= 128)) {
     for(var i = 0; i < passwordLength; i++) {
       newPassword += passwordChars.charAt(Math.floor(Math.random() * passwordChars.length));
     };
@@ -81,7 +81,8 @@ function generatePassword() {
 function validatePassword(newPassword, lowercaseCharsInclude, uppercaseCharsInclude, numCharsInclude, specialCharsInclude) {
       for(var i = 0; i < newPassword.length; i++) {
         if(lowercaseCharsInclude) {
-          if(newPassword.charAt(i) === lowercaseChars.charAt(i)) {
+          if(newPassword.charAt(i).includes(lowercaseChars) {
+
 *        }  
 *      }
 *    }
